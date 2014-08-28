@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Login</title>
+    <link rel='stylesheet' href='/css/bootstrap.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <header class="text-right">
+      <a href="/user/login">Login</a>
+      <a href="/user/register">Register</a>
+    </header>
+    <h1>User List</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(function(user){ %>
+        <tr>
+          <td><%= user.email %></td>
+          <td><%= user.username %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
